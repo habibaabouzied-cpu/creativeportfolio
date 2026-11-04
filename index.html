@@ -1,1 +1,1106 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Habiba Abouzied</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Habiba Abouzied, marketing communications specialist and filmmaker based in Cairo.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..700;1,6..96,400..600&family=Hanken+Grotesk:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a contact sheet. Paper pages for strategy and career, a dark "screening room" band for film,
+   reels shown as sprocketed 9:16 frames. Colors pulled from Enemy of the Sun: overcast sky, dry grass, a red sweater. */
+:root{
+  --paper:#E7E7E0; --paper-2:#DADAD1; --ink:#191B17; --ink-2:#565850; --rule:#B6B6AB;
+  --red:#A1342A; --olive:#696744;
+  --screen:#111210; --screen-2:#1C1D1A; --screen-fg:#E8E6DE; --screen-mute:#93918A; --screen-red:#E2705C; --screen-rule:#34352F;
+  --display:"Bodoni Moda", "Bodoni 72", Didot, "Times New Roman", serif;
+  --body:"Hanken Grotesk", "Helvetica Neue", Arial, sans-serif;
+  --mono:"IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+  --gut:max(16px, env(safe-area-inset-left, 0px));
+  --gut-r:max(16px, env(safe-area-inset-right, 0px));
+  --max:1240px;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#151613; --paper-2:#1F201C; --ink:#E6E5DD; --ink-2:#A4A398; --rule:#3B3C35;
+    --red:#E06C58; --olive:#B4B083; --screen:#0A0B09; --screen-2:#171815; color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#151613; --paper-2:#1F201C; --ink:#E6E5DD; --ink-2:#A4A398; --rule:#3B3C35;
+  --red:#E06C58; --olive:#B4B083; --screen:#0A0B09; --screen-2:#171815; color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth; scroll-padding-top:72px}
+@media (prefers-reduced-motion: reduce){ html{scroll-behavior:auto} *{animation:none!important; transition:none!important} }
+body{background:var(--paper); color:var(--ink); font-family:var(--body); font-size:17px; line-height:1.6; -webkit-font-smoothing:antialiased}
+body::before{content:""; position:fixed; inset:0 0 auto; height:env(safe-area-inset-top, 0px); z-index:10; background:var(--paper)}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--red); outline-offset:3px}
+h1,h2,h3{font-family:var(--display); font-weight:500; text-wrap:balance; margin:0; line-height:1.05}
+p{margin:0}
+.mono{font-family:var(--mono); font-size:12px; letter-spacing:.08em; text-transform:uppercase}
+.wrap{max-width:var(--max); margin:0 auto; padding-left:var(--gut); padding-right:var(--gut-r)}
+.band{padding-block:clamp(64px, 9vw, 120px)}
+.rule-top{border-top:1px solid var(--rule)}
 
+/* ---------- header ---------- */
+.site-head{position:sticky; top:env(safe-area-inset-top, 0px); z-index:20; background:var(--paper); border-bottom:1px solid var(--rule)}
+.site-head .wrap{display:flex; align-items:center; justify-content:space-between; gap:16px; height:60px}
+.brand{font-family:var(--display); font-size:21px; font-weight:600; text-decoration:none; letter-spacing:-.01em}
+.brand span{color:var(--red); font-style:italic; font-weight:500}
+.nav{display:flex; gap:28px; align-items:center}
+.nav a{font-family:var(--mono); font-size:12px; letter-spacing:.08em; text-transform:uppercase; text-decoration:none; color:var(--ink-2); padding-block:6px; border-bottom:1px solid transparent}
+.nav a:hover,.nav a[aria-current="true"]{color:var(--ink); border-bottom-color:var(--red)}
+.menu-btn{display:none; font:500 12px/1 var(--mono); letter-spacing:.08em; text-transform:uppercase; background:none; border:1px solid var(--ink); color:var(--ink); padding:9px 12px; border-radius:0; cursor:pointer}
+@media (max-width:820px){
+  .menu-btn{display:block}
+  .nav{display:none; position:absolute; left:0; right:0; top:60px; background:var(--paper); flex-direction:column; align-items:stretch; gap:0; border-bottom:1px solid var(--rule); padding:8px var(--gut-r) 16px var(--gut)}
+  .nav.open{display:flex}
+  .nav a{padding-block:14px; border-bottom:1px solid var(--rule); font-size:13px}
+}
+
+/* ---------- hero ---------- */
+.hero{padding-block:clamp(40px, 7vw, 96px) clamp(48px, 7vw, 96px)}
+.hero-grid{display:grid; grid-template-columns:minmax(0,7fr) minmax(0,5fr); gap:clamp(28px, 5vw, 72px); align-items:end}
+.hero .eyebrow{color:var(--red); margin-bottom:28px; display:flex; gap:14px; align-items:center}
+.hero .eyebrow::before{content:""; width:36px; height:1px; background:var(--red)}
+.hero h1{font-size:clamp(52px, 9.2vw, 132px); letter-spacing:-.035em; line-height:.92; font-weight:500}
+.hero h1 em{font-weight:400; color:var(--red)}
+.hero .lede{font-size:clamp(19px, 2vw, 23px); line-height:1.45; max-width:30ch; margin-top:32px; color:var(--ink)}
+.still{margin:0}
+.still .frame{background:var(--screen); padding:10px 10px 0; position:relative}
+.still img{display:block; width:100%; height:auto; aspect-ratio:16/9; object-fit:cover}
+.still figcaption{display:flex; justify-content:space-between; gap:12px; background:var(--screen); color:var(--screen-mute); padding:9px 10px 10px; font-family:var(--mono); font-size:11px; letter-spacing:.08em; text-transform:uppercase}
+.still figcaption b{color:var(--screen-fg); font-weight:500}
+.slate{display:grid; grid-template-columns:repeat(4, minmax(0,1fr)); margin-top:clamp(48px, 6vw, 80px); border-top:1px solid var(--ink); border-bottom:1px solid var(--rule)}
+.slate div{padding:14px 16px 16px 0; display:flex; flex-direction:column; gap:4px; min-width:0}
+.slate div + div{padding-left:16px; border-left:1px solid var(--rule)}
+.slate dt{color:var(--ink-2)}
+.slate dd{margin:0; font-family:var(--display); font-size:21px; line-height:1.2}
+@media (max-width:900px){ .hero-grid{grid-template-columns:1fr} .still{max-width:620px} }
+@media (max-width:640px){ .slate{grid-template-columns:1fr 1fr} .slate div:nth-child(3){padding-left:0; border-left:0} .slate div:nth-child(n+3){border-top:1px solid var(--rule)} }
+.hero .eyebrow,.hero h1,.hero .lede,.hero .still{animation:rise .9s cubic-bezier(.2,.7,.2,1) both}
+.hero h1{animation-delay:.08s} .hero .lede{animation-delay:.18s} .hero .still{animation-delay:.28s}
+@keyframes rise{from{transform:translateY(14px); opacity:.001} to{transform:none; opacity:1}}
+
+/* ---------- section heads ---------- */
+.sec-head{display:grid; grid-template-columns:minmax(0,4fr) minmax(0,8fr); gap:clamp(20px, 4vw, 56px); align-items:end; margin-bottom:clamp(36px, 5vw, 64px)}
+.sec-head .kicker{color:var(--red); margin-bottom:14px}
+.sec-head h2{font-size:clamp(40px, 5.6vw, 76px); letter-spacing:-.03em}
+.sec-head h2 em{font-weight:400}
+.sec-head p{max-width:58ch; color:var(--ink-2)}
+@media (max-width:820px){ .sec-head{grid-template-columns:1fr} }
+
+/* ---------- about ---------- */
+.about-grid{display:grid; grid-template-columns:minmax(0,4fr) minmax(0,8fr); gap:clamp(28px, 5vw, 72px)}
+.portrait{margin:0; position:sticky; top:88px; align-self:start}
+.portrait img{display:block; width:100%; aspect-ratio:4/5; object-fit:cover; object-position:50% 20%; filter:saturate(.92)}
+.portrait figcaption{margin-top:10px; color:var(--ink-2)}
+.about-body{min-width:0}
+.pull{font-family:var(--display); font-size:clamp(26px, 3.1vw, 40px); line-height:1.22; letter-spacing:-.015em; max-width:26ch}
+.pull em{color:var(--red)}
+.about-text{display:grid; grid-template-columns:1fr 1fr; gap:24px 40px; margin-top:36px; color:var(--ink-2)}
+.about-text p{max-width:42ch}
+.index{margin-top:56px; border-top:1px solid var(--ink)}
+.index-row{display:grid; grid-template-columns:minmax(0,3fr) minmax(0,8fr); gap:20px; padding-block:16px; border-bottom:1px solid var(--rule)}
+.index-row dt{font-family:var(--display); font-size:21px; line-height:1.3}
+.index-row dd{margin:0; color:var(--ink-2); min-width:0}
+.facts{display:grid; grid-template-columns:repeat(3, minmax(0,1fr)); gap:28px; margin-top:48px}
+.facts h3{font-family:var(--mono); font-size:12px; letter-spacing:.08em; text-transform:uppercase; font-weight:500; color:var(--red); margin-bottom:10px}
+.facts ul{list-style:none; margin:0; padding:0; display:grid; gap:10px}
+.facts li{font-size:15px; line-height:1.45}
+.facts li small{display:block; color:var(--ink-2); font-size:13px}
+@media (max-width:900px){ .about-grid{grid-template-columns:1fr} .portrait{position:static; max-width:380px} }
+@media (max-width:640px){ .about-text,.facts{grid-template-columns:1fr} .index-row{grid-template-columns:1fr; gap:4px} }
+
+/* ---------- reels: sprocketed contact sheet ---------- */
+.filters{display:flex; flex-wrap:wrap; gap:8px; margin-bottom:28px}
+.chip{font:500 12px/1 var(--mono); letter-spacing:.07em; text-transform:uppercase; padding:10px 14px; border:1px solid var(--rule); background:transparent; color:var(--ink-2); cursor:pointer; border-radius:0}
+.chip:hover{border-color:var(--ink); color:var(--ink)}
+.chip[aria-pressed="true"]{background:var(--ink); border-color:var(--ink); color:var(--paper)}
+.chip .n{opacity:.6; margin-left:6px}
+.sheet{display:grid; grid-template-columns:repeat(4, minmax(0,1fr)); gap:0; background:var(--screen); padding:0 6px}
+.reel{position:relative; padding:30px 8px; min-width:0}
+.reel::before,.reel::after{content:""; position:absolute; left:0; right:0; height:12px; background:radial-gradient(circle at 50% 50%, var(--paper) 0 0) ; background:repeating-linear-gradient(90deg, transparent 0 7px, var(--paper) 7px 19px, transparent 19px 26px); opacity:.9; border-radius:2px}
+.reel::before{top:9px} .reel::after{bottom:9px}
+.reel-card{display:flex; flex-direction:column; justify-content:space-between; aspect-ratio:9/16; max-width:100%; background:var(--screen-2); color:var(--screen-fg); text-decoration:none; padding:16px 14px; position:relative; overflow:hidden; transition:background .25s}
+.reel-card:hover{background:#262722}
+.reel-top{display:flex; justify-content:space-between; gap:8px; color:var(--screen-mute); font-family:var(--mono); font-size:11px; letter-spacing:.08em; text-transform:uppercase}
+.reel-top b{color:var(--screen-red); font-weight:500}
+.reel-mid{display:grid; place-items:center}
+.play{width:58px; height:58px; border:1px solid var(--screen-mute); border-radius:50%; display:grid; place-items:center; transition:border-color .25s, transform .25s}
+.play svg{width:18px; height:18px; margin-left:3px; fill:var(--screen-fg)}
+.reel-card:hover .play{border-color:var(--screen-red); transform:scale(1.06)}
+.reel-name{font-family:var(--display); font-size:clamp(22px, 2.1vw, 28px); line-height:1.08; letter-spacing:-.01em}
+.reel-name small{display:block; font-family:var(--mono); font-size:11px; letter-spacing:.06em; color:var(--screen-mute); margin-top:8px; text-transform:none}
+.reel-foot{margin-top:14px; padding-top:10px; border-top:1px solid var(--screen-rule); color:var(--screen-mute); font-family:var(--mono); font-size:11px; letter-spacing:.08em; text-transform:uppercase}
+.reel iframe{display:block; width:100%; aspect-ratio:9/16; min-height:520px; border:0; background:var(--screen-2)}
+.sheet-note{margin-top:14px; color:var(--ink-2); font-size:14px}
+@media (max-width:1000px){ .sheet{grid-template-columns:repeat(3, minmax(0,1fr))} }
+@media (max-width:720px){ .sheet{grid-template-columns:repeat(2, minmax(0,1fr))} .reel-card{padding:12px 10px} .play{width:46px; height:46px} }
+
+/* ---------- film band ---------- */
+.screening{background:var(--screen); color:var(--screen-fg)}
+.screening .sec-head .kicker{color:var(--screen-red)}
+.screening .sec-head p{color:var(--screen-mute)}
+.feature{display:grid; grid-template-columns:minmax(0,7fr) minmax(0,5fr); gap:clamp(28px, 5vw, 64px); align-items:start}
+.stills{display:grid; grid-template-columns:repeat(6, minmax(0,1fr)); gap:12px}
+.stills figure{margin:0}
+.stills figure:first-child{grid-column:1 / -1}
+.stills figure:not(:first-child){grid-column:span 3}
+.stills img{display:block; width:100%; height:auto; aspect-ratio:16/9; object-fit:cover}
+.stills figcaption{margin-top:12px; color:var(--screen-mute); font-family:var(--mono); font-size:11px; letter-spacing:.08em; text-transform:uppercase}
+.feature-text h3{font-size:clamp(44px, 5.6vw, 76px); letter-spacing:-.03em; font-style:italic; font-weight:400}
+.feature-text .tag{color:var(--screen-red); margin-bottom:16px}
+.feature-text p{color:var(--screen-mute); margin-top:22px; max-width:44ch}
+.credits{margin:28px 0 0; padding:0; border-top:1px solid var(--screen-rule)}
+.credits div{display:flex; justify-content:space-between; gap:16px; padding-block:12px; border-bottom:1px solid var(--screen-rule)}
+.credits dt{color:var(--screen-mute)} .credits dd{margin:0; text-align:right}
+.btn{display:inline-flex; align-items:center; gap:10px; margin-top:28px; font:500 13px/1 var(--mono); letter-spacing:.08em; text-transform:uppercase; text-decoration:none; padding:16px 20px; border:1px solid currentColor; transition:background .2s, color .2s}
+.screening .btn{color:var(--screen-fg)}
+.screening .btn:hover{background:var(--screen-fg); color:var(--screen)}
+.reels-head{display:flex; align-items:baseline; justify-content:space-between; gap:16px; flex-wrap:wrap; margin:clamp(72px, 9vw, 112px) 0 24px; padding-top:20px; border-top:1px solid var(--screen-rule)}
+.reels-head h3{font-size:clamp(30px, 3.4vw, 44px); letter-spacing:-.02em}
+.reels-head p{color:var(--screen-mute); font-family:var(--mono); font-size:12px; letter-spacing:.08em; text-transform:uppercase}
+.vids{display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:28px 24px}
+.vids.single{grid-template-columns:minmax(0,1fr)}
+.vids.single .vid{max-width:820px}
+.vid{min-width:0}
+.vid-frame{display:grid; place-items:center; position:relative; aspect-ratio:16/9; max-width:100%; background:var(--screen-2) center/cover no-repeat; color:var(--screen-fg); text-decoration:none; border:1px solid var(--screen-rule); cursor:pointer; width:100%; padding:0; font:inherit}
+.vid-frame::after{content:""; position:absolute; inset:0; background:linear-gradient(transparent 55%, rgba(0,0,0,.55))}
+.vid-frame .play{position:relative; z-index:1; width:68px; height:68px; background:rgba(10,10,9,.35)}
+.vid-frame:hover .play{border-color:var(--screen-red); transform:scale(1.06)}
+.vid-frame .corner{position:absolute; z-index:1; left:14px; top:12px; font-family:var(--mono); font-size:11px; letter-spacing:.08em; text-transform:uppercase; color:var(--screen-mute)}
+.vid iframe{display:block; width:100%; aspect-ratio:16/9; border:0}
+.vid-cap{display:flex; justify-content:space-between; gap:12px; margin-top:12px; font-size:15px}
+.vid-cap span{color:var(--screen-mute); font-family:var(--mono); font-size:11px; letter-spacing:.08em; text-transform:uppercase; text-align:right}
+@media (max-width:900px){ .feature{grid-template-columns:1fr} }
+@media (max-width:640px){ .vids{grid-template-columns:1fr} }
+
+/* ---------- samples ---------- */
+.samples{display:grid; grid-template-columns:repeat(3, minmax(0,1fr)); border-top:1px solid var(--ink)}
+.sample{display:flex; flex-direction:column; gap:14px; padding:28px 28px 32px 0; text-decoration:none; min-width:0; border-bottom:1px solid var(--rule)}
+.sample + .sample{padding-left:28px; border-left:1px solid var(--rule)}
+.sample .mono{color:var(--red)}
+.sample h3{font-size:clamp(28px, 2.8vw, 38px); letter-spacing:-.02em}
+.sample p{color:var(--ink-2); font-size:15px; max-width:38ch}
+.sample .go{margin-top:auto; padding-top:18px; font-family:var(--mono); font-size:12px; letter-spacing:.08em; text-transform:uppercase; display:flex; gap:8px; align-items:center}
+.sample:hover h3{color:var(--red)}
+.sample:hover .go .arr{transform:translateX(4px)}
+.arr{display:inline-block; transition:transform .2s}
+@media (max-width:860px){ .samples{grid-template-columns:1fr} .sample,.sample + .sample{padding:24px 0; border-left:0} }
+
+/* ---------- experience ---------- */
+.exp-grid{display:grid; grid-template-columns:minmax(0,8fr) minmax(0,4fr); gap:clamp(28px, 5vw, 72px)}
+.timeline{list-style:none; margin:0; padding:0; border-top:1px solid var(--ink)}
+.job{border-bottom:1px solid var(--rule)}
+.job details{display:block}
+.job summary{display:grid; grid-template-columns:minmax(0,170px) minmax(0,1fr) 24px; gap:20px; padding-block:22px; cursor:pointer; list-style:none; align-items:baseline}
+.job summary::-webkit-details-marker{display:none}
+.job .when{font-family:var(--mono); font-size:12px; letter-spacing:.06em; text-transform:uppercase; color:var(--ink-2); font-variant-numeric:tabular-nums}
+.job .when b{display:block; color:var(--red); font-weight:500}
+.job h3{font-size:clamp(23px, 2.4vw, 30px); letter-spacing:-.01em; line-height:1.15}
+.job .org{display:block; font-family:var(--body); font-size:15px; color:var(--ink-2); margin-top:6px; letter-spacing:0}
+.job .tog{font-family:var(--mono); font-size:20px; line-height:1; color:var(--ink-2); transition:transform .25s; justify-self:end}
+.job details[open] .tog{transform:rotate(45deg); color:var(--red)}
+.job ul{margin:0 0 24px; padding:0 0 0 190px; list-style:none; display:grid; gap:10px; color:var(--ink-2); max-width:calc(190px + 64ch)}
+.job li{position:relative; padding-left:18px}
+.job li::before{content:""; position:absolute; left:0; top:.72em; width:8px; height:1px; background:var(--red)}
+.side h3{font-family:var(--mono); font-size:12px; letter-spacing:.08em; text-transform:uppercase; font-weight:500; color:var(--red); padding-bottom:12px; border-bottom:1px solid var(--ink)}
+.side ol{list-style:none; margin:0 0 44px; padding:0}
+.side li{padding-block:16px; border-bottom:1px solid var(--rule); font-family:var(--display); font-size:20px; line-height:1.25}
+.side li small{display:block; font-family:var(--mono); font-size:11px; letter-spacing:.08em; text-transform:uppercase; color:var(--ink-2); margin-top:6px}
+@media (max-width:900px){ .exp-grid{grid-template-columns:1fr} }
+@media (max-width:640px){ .job summary{grid-template-columns:minmax(0,1fr) 24px; gap:8px 12px} .job .when{grid-column:1 / -1} .job ul{padding-left:0} }
+
+/* ---------- contact ---------- */
+.contact{border-top:1px solid var(--ink)}
+.contact h2{font-size:clamp(48px, 8.6vw, 124px); letter-spacing:-.035em; line-height:.95; max-width:13ch}
+.contact h2 em{color:var(--red); font-weight:400}
+.contact-grid{display:grid; grid-template-columns:repeat(3, minmax(0,1fr)); margin-top:clamp(40px, 6vw, 72px); border-top:1px solid var(--rule)}
+.contact-grid > div{padding:20px 24px 4px 0; min-width:0}
+.contact-grid > div + div{padding-left:24px; border-left:1px solid var(--rule)}
+.contact-grid .mono{color:var(--ink-2); margin-bottom:10px}
+.big-link{font-family:var(--display); font-size:clamp(20px, 2.2vw, 28px); line-height:1.25; text-decoration:none; overflow-wrap:anywhere; user-select:all; border-bottom:1px solid var(--red)}
+.big-link:hover{color:var(--red)}
+.copy{display:inline-flex; margin-top:14px; font:500 12px/1 var(--mono); letter-spacing:.08em; text-transform:uppercase; background:none; color:var(--ink); border:1px solid var(--ink); padding:10px 12px; cursor:pointer; border-radius:0}
+.copy:hover{background:var(--ink); color:var(--paper)}
+.foot{display:flex; justify-content:space-between; gap:16px; flex-wrap:wrap; padding-block:28px; color:var(--ink-2); border-top:1px solid var(--rule); margin-top:clamp(64px, 8vw, 104px)}
+@media (max-width:760px){ .contact-grid{grid-template-columns:1fr} .contact-grid > div,.contact-grid > div + div{padding:18px 0; border-left:0; border-bottom:1px solid var(--rule)} }
+
+/* ---------- Padel Finder view ---------- */
+.crumb{display:inline-flex; gap:8px; color:var(--ink-2); text-decoration:none; margin-bottom:36px}
+.crumb:hover{color:var(--red)}
+.case-hero h1{font-size:clamp(46px, 7.6vw, 108px); letter-spacing:-.035em; line-height:.95}
+.case-hero h1 em{color:var(--red); font-weight:400}
+.case-intro{display:grid; grid-template-columns:minmax(0,7fr) minmax(0,5fr); gap:clamp(28px, 5vw, 72px); margin-top:40px}
+.case-intro p{font-size:clamp(18px, 1.7vw, 21px); max-width:52ch}
+.case-intro p + p{margin-top:16px; color:var(--ink-2); font-size:16px}
+.stats{display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); border-top:1px solid var(--ink); align-self:start}
+.stat{padding:14px 0 16px; border-bottom:1px solid var(--rule)}
+.stat:nth-child(even){padding-left:16px; border-left:1px solid var(--rule)}
+.stat b{display:block; font-family:var(--display); font-size:44px; font-weight:500; line-height:1; font-variant-numeric:tabular-nums}
+.stat span{color:var(--ink-2)}
+.tabs{display:flex; gap:0; margin-top:clamp(48px, 6vw, 80px); border-bottom:1px solid var(--ink); overflow-x:auto}
+.tab{font:500 13px/1 var(--mono); letter-spacing:.08em; text-transform:uppercase; padding:16px 18px; background:none; border:0; border-bottom:3px solid transparent; color:var(--ink-2); cursor:pointer; white-space:nowrap; margin-bottom:-1px}
+.tab[aria-selected="true"]{color:var(--ink); border-bottom-color:var(--red)}
+.strip{display:grid; grid-template-columns:repeat(31, minmax(0,1fr)); gap:2px; margin:28px 0 8px}
+.strip a,.strip span{display:grid; place-items:center; aspect-ratio:1/1.5; font-family:var(--mono); font-size:10px; color:var(--ink-2); text-decoration:none; background:var(--paper-2); font-variant-numeric:tabular-nums}
+.strip a{background:var(--ink); color:var(--paper)}
+.strip a.is-dim{background:var(--paper-2); color:var(--ink-2); opacity:.55}
+.strip a:hover{background:var(--red)}
+.strip-legend{display:flex; justify-content:space-between; color:var(--ink-2); margin-bottom:28px}
+@media (max-width:640px){ .strip{grid-template-columns:repeat(16, minmax(0,1fr))} }
+.cal-filters{display:flex; flex-wrap:wrap; gap:8px 24px; align-items:center; margin-bottom:8px}
+.cal-filters .group{display:flex; flex-wrap:wrap; gap:8px; align-items:center}
+.cal-filters .group > .mono{color:var(--ink-2); margin-right:4px}
+.posts{list-style:none; margin:0; padding:0; border-top:1px solid var(--ink)}
+.post{border-bottom:1px solid var(--rule)}
+.post summary{display:grid; grid-template-columns:72px 120px minmax(0,1fr) minmax(0,200px) 24px; gap:20px; align-items:center; padding-block:18px; cursor:pointer; list-style:none}
+.post summary::-webkit-details-marker{display:none}
+.post .day{font-family:var(--display); font-size:40px; line-height:1; font-variant-numeric:tabular-nums}
+.post .day small{display:block; font-family:var(--mono); font-size:11px; letter-spacing:.08em; text-transform:uppercase; color:var(--ink-2); margin-top:4px}
+.fmt{justify-self:start; font:500 11px/1 var(--mono); letter-spacing:.08em; text-transform:uppercase; padding:7px 9px; border:1px solid currentColor}
+.fmt[data-f="Reel"]{color:var(--red)} .fmt[data-f="Carousel"]{color:var(--olive)} .fmt[data-f="Static"]{color:var(--ink)} .fmt[data-f="Stories"]{color:var(--ink-2); border-style:dashed}
+.post .idea{font-family:var(--display); font-size:21px; line-height:1.25; min-width:0}
+.post .goal{color:var(--ink-2); font-size:14px; line-height:1.35}
+.post .tog{font-family:var(--mono); font-size:20px; color:var(--ink-2); transition:transform .25s; justify-self:end}
+.post details[open] .tog{transform:rotate(45deg); color:var(--red)}
+.post-body{display:grid; grid-template-columns:minmax(0,7fr) minmax(0,4fr); gap:32px; padding:4px 0 28px 212px}
+.field{margin-bottom:18px}
+.field .mono{color:var(--red); margin-bottom:6px}
+.field p{white-space:pre-line; max-width:62ch}
+.flags{display:grid; gap:0; border-top:1px solid var(--rule); align-self:start}
+.flags div{display:flex; justify-content:space-between; gap:12px; padding-block:10px; border-bottom:1px solid var(--rule); font-size:14px}
+.flags dt{color:var(--ink-2)} .flags dd{margin:0; text-align:right; overflow-wrap:anywhere}
+.flags a{color:var(--red)}
+.to-brief{display:inline-block; margin-top:6px; font-family:var(--mono); font-size:12px; letter-spacing:.08em; text-transform:uppercase; color:var(--red); text-decoration:none; border-bottom:1px solid var(--red)}
+.empty{padding:28px 0; color:var(--ink-2)}
+@media (max-width:900px){
+  .case-intro{grid-template-columns:1fr}
+  .post summary{grid-template-columns:60px minmax(0,1fr) 24px; gap:6px 14px}
+  .post .fmt{grid-column:2; grid-row:1} .post .idea{grid-column:2} .post .goal{grid-column:2} .post .tog{grid-column:3; grid-row:1}
+  .post .day{grid-row:1 / span 3}
+  .post-body{grid-template-columns:1fr; padding-left:74px}
+}
+@media (max-width:520px){ .post-body{padding-left:0} }
+.case-hero h1{max-width:16ch}
+.hooks{display:grid; grid-template-columns:repeat(4, minmax(0,1fr)); gap:0; margin-top:clamp(36px, 5vw, 56px); border-top:1px solid var(--ink)}
+.hook-card{display:flex; flex-direction:column; gap:14px; padding:20px 20px 24px 0; text-decoration:none; min-width:0; border-bottom:1px solid var(--rule)}
+.hook-card + .hook-card{padding-left:20px; border-left:1px solid var(--rule)}
+.hook-card .mono{color:var(--red)}
+.hook-card q{font-family:var(--display); font-style:italic; font-size:clamp(22px, 2.2vw, 28px); line-height:1.2; quotes:none}
+.hook-card:hover q{color:var(--red)}
+@media (max-width:860px){ .hooks{grid-template-columns:1fr 1fr} .hook-card:nth-child(3){padding-left:0; border-left:0} }
+@media (max-width:520px){ .hooks{grid-template-columns:1fr} .hook-card,.hook-card + .hook-card{padding:18px 0; border-left:0} }
+@media (min-width:1101px){ .sheet{grid-template-columns:repeat(5, minmax(0,1fr))} }
+.mv{display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:12px}
+.montage{display:grid; grid-template-columns:repeat(12, minmax(0,1fr)); gap:0 clamp(16px, 2.5vw, 32px); margin-top:clamp(40px, 6vw, 80px); align-items:start; animation:rise .9s .28s cubic-bezier(.2,.7,.2,1) both}
+.montage figure{margin:0; min-width:0}
+.montage img{display:block; width:100%; height:auto; object-fit:cover}
+.mo-a{grid-column:1 / -1}
+.mo-a img{aspect-ratio:21/9; object-position:50% 40%}
+.mo-b{grid-column:9 / 13; margin-top:38%}
+.mo-b img{aspect-ratio:4/5}
+.montage figcaption{display:flex; justify-content:space-between; gap:12px; margin-top:12px; padding-top:10px; border-top:1px solid var(--rule); font-family:var(--mono); font-size:11px; letter-spacing:.08em; text-transform:uppercase; color:var(--ink-2)}
+.montage figcaption b{color:var(--ink); font-weight:500}
+.mo-num{color:var(--red)}
+@media (max-width:640px){
+  .mo-a img{aspect-ratio:16/10}
+  .mo-b{grid-column:4 / -1; margin-top:36px}
+}
+.place{margin-left:10px; color:var(--ink-2)}
+.place::before{content:"· "}
+.mk-lede{font-size:clamp(18px, 1.8vw, 22px); max-width:46ch; margin-top:28px; color:var(--ink-2)}
+.mk-flow{display:grid; grid-template-columns:1fr 1fr; gap:0; margin-top:clamp(40px, 6vw, 72px); border-top:1px solid var(--ink)}
+.mk-step{padding:28px 32px 32px 0; min-width:0}
+.mk-step + .mk-step{padding:28px 0 32px 32px; border-left:1px solid var(--rule)}
+.mk-step > .mono{color:var(--ink-2)} .mk-step > .mono b{color:var(--red); font-weight:500; margin-right:8px}
+.mk-step h3{font-size:clamp(34px, 4vw, 52px); font-style:italic; font-weight:400; margin:12px 0 20px}
+.mk-beats{margin:0; padding-left:22px; display:grid; gap:12px; font-size:17px}
+.mk-ad{margin:0 0 18px; max-width:340px}
+.mk-ad img{display:block; width:100%; height:auto}
+.mk-quote{font-family:var(--display); font-size:clamp(22px, 2.2vw, 28px); line-height:1.2}
+.mk-tags{color:var(--ink-2); margin-top:10px; line-height:1.8}
+.mk-link{display:inline-block; margin-top:24px; font-family:var(--mono); font-size:13px; letter-spacing:.08em; text-transform:uppercase; text-decoration:none; border-bottom:1px solid var(--red); padding-bottom:4px}
+.mk-link:hover{color:var(--red)}
+.mk-synergy{font-family:var(--display); font-size:clamp(30px, 4.2vw, 56px); line-height:1.1; letter-spacing:-.02em; max-width:20ch; margin-top:clamp(48px, 7vw, 88px); padding-top:28px; border-top:1px solid var(--ink); text-wrap:balance}
+.mk-synergy em{color:var(--red)}
+.mk-extra{color:var(--ink-2); margin-top:24px}
+@media (max-width:760px){ .mk-flow{grid-template-columns:1fr} .mk-step,.mk-step + .mk-step{padding:24px 0; border-left:0} .mk-step + .mk-step{border-top:1px solid var(--rule)} }
+.mv figure{margin:0}
+.mv img{display:block; width:100%; height:auto; aspect-ratio:3/2; object-fit:cover}
+@media (max-width:760px){ .mv{grid-template-columns:1fr 1fr} }
+.act-top{display:grid; grid-template-columns:minmax(0,5fr) minmax(0,7fr); gap:clamp(28px, 5vw, 64px)}
+.act-event{margin:0; border-top:1px solid var(--ink); align-self:start}
+.act-event div{padding-block:14px; border-bottom:1px solid var(--rule)}
+.act-event dt{color:var(--red); margin-bottom:4px}
+.act-event dd{margin:0; font-family:var(--display); font-size:22px; line-height:1.25}
+.act-event small{display:block; font-family:var(--body); font-size:14px; color:var(--ink-2); margin-top:4px}
+.act-lists{display:grid; grid-template-columns:1fr 1fr; gap:32px}
+.act-lists h3,.act-risks h3{color:var(--red); font-weight:500; padding-bottom:10px; border-bottom:1px solid var(--ink); margin-bottom:12px}
+.act-lists ol,.act-lists ul{margin:0; padding-left:20px; display:grid; gap:10px; color:var(--ink-2); font-size:15px}
+.act-lists b,.act-risks b{color:var(--ink); font-weight:600}
+.ideas{display:grid; grid-template-columns:repeat(4, minmax(0,1fr)); gap:0; margin-top:clamp(40px, 6vw, 72px); border-top:1px solid var(--ink)}
+.ideas article{padding:22px 22px 26px 0; border-bottom:1px solid var(--rule); min-width:0}
+.ideas article:not(:nth-child(4n+1)){padding-left:22px; border-left:1px solid var(--rule)}
+.ideas .mono{color:var(--red)}
+.ideas h4{font-family:var(--display); font-weight:500; font-size:clamp(22px, 2vw, 26px); line-height:1.15; margin:10px 0 10px}
+.ideas p{color:var(--ink-2); font-size:15px}
+.act-risks{display:grid; gap:8px; margin-top:44px; max-width:720px; color:var(--ink-2); font-size:15px}
+@media (max-width:900px){ .act-top{grid-template-columns:1fr} .ideas{grid-template-columns:1fr 1fr} .ideas article:not(:nth-child(4n+1)){padding-left:0; border-left:0} .ideas article:nth-child(even){padding-left:22px; border-left:1px solid var(--rule)} }
+@media (max-width:560px){ .act-lists{grid-template-columns:1fr} .ideas{grid-template-columns:1fr} .ideas article,.ideas article:nth-child(even){padding:18px 0; border-left:0} }
+.gallery{display:grid; gap:12px}
+.g-row{display:flex; gap:12px}
+.g-row figure{margin:0; flex:var(--ar) 1 0; min-width:0; aspect-ratio:var(--ar)}
+.g-row figure img{height:100%}
+.g-row img{display:block; width:100%; height:auto; aspect-ratio:var(--ar); object-fit:cover; transition:filter .3s}
+@media (hover:hover){ .gallery:hover img{filter:saturate(.7) brightness(.92)} .gallery img:hover{filter:none} }
+@media (max-width:640px){ .g-row{flex-direction:column} .g-row figure{flex:none} }
+.ads-head{display:flex; align-items:baseline; justify-content:space-between; gap:16px; flex-wrap:wrap; margin:clamp(72px, 9vw, 112px) 0 24px; padding-top:20px; border-top:1px solid var(--ink)}
+.ads-head h3{font-size:clamp(30px, 3.4vw, 44px); letter-spacing:-.02em}
+.ads-head p{color:var(--ink-2)}
+.ads{display:grid; grid-template-columns:repeat(3, minmax(0,1fr)); gap:clamp(12px, 2vw, 24px)}
+.ads figure{margin:0; min-width:0}
+.ads img{display:block; width:100%; height:auto; aspect-ratio:4/5; object-fit:cover}
+.ads figcaption{display:flex; justify-content:space-between; gap:12px; margin-top:12px; padding-top:10px; border-top:1px solid var(--rule); font-family:var(--mono); font-size:11px; letter-spacing:.08em; text-transform:uppercase; color:var(--ink-2)}
+.ads figcaption b{font-family:var(--display); font-size:18px; letter-spacing:0; text-transform:none; font-weight:500; color:var(--ink)}
+.ads-note{margin-top:20px; color:var(--ink-2)}
+@media (max-width:760px){ .ads{grid-template-columns:1fr} .ads figure{max-width:440px} }
+.projects{border-top:1px solid var(--ink)}
+.project{display:grid; grid-template-columns:minmax(0,3fr) minmax(0,6fr) minmax(0,3fr); gap:24px; align-items:baseline; padding-block:32px; border-bottom:1px solid var(--rule)}
+.field-lbl{color:var(--red)}
+.project h3{font-size:clamp(34px, 4vw, 56px); letter-spacing:-.025em}
+.project-main p{color:var(--ink-2); margin-top:10px}
+.project-links{display:flex; flex-direction:column; gap:12px; align-items:flex-start}
+.project-links a{font-family:var(--mono); font-size:13px; letter-spacing:.08em; text-transform:uppercase; text-decoration:none; border-bottom:1px solid var(--red); padding-bottom:4px}
+.project-links a:hover{color:var(--red)}
+.project-links a:hover .arr{transform:translateX(4px)}
+@media (max-width:760px){ .project{grid-template-columns:1fr; gap:12px} }
+.briefs{display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:0; border-top:1px solid var(--ink)}
+.brief{padding:28px 28px 32px 0; border-bottom:1px solid var(--rule); min-width:0}
+.brief:nth-child(even){padding-left:28px; padding-right:0; border-left:1px solid var(--rule)}
+.brief.flash{animation:flash 1.6s ease}
+@keyframes flash{0%,40%{background:var(--paper-2)} 100%{background:transparent}}
+.brief-n{display:flex; justify-content:space-between; color:var(--ink-2)}
+.brief-n b{color:var(--red); font-weight:500}
+.brief h3{font-size:clamp(26px, 2.6vw, 34px); letter-spacing:-.015em; margin:12px 0 16px}
+.brief .concept{color:var(--ink-2); max-width:56ch}
+.brief ul{margin:12px 0 0; padding:0; list-style:none; display:grid; gap:6px; color:var(--ink-2); font-size:15px}
+.brief li{padding-left:18px; position:relative}
+.brief li::before{content:""; position:absolute; left:0; top:.72em; width:8px; height:1px; background:var(--red)}
+.brief li b{color:var(--ink); font-weight:600}
+.brief dl{margin:20px 0 0; border-top:1px solid var(--rule)}
+.brief dl div{display:grid; grid-template-columns:96px minmax(0,1fr); gap:12px; padding-block:10px; border-bottom:1px solid var(--rule); font-size:15px}
+.brief dt{font-family:var(--mono); font-size:11px; letter-spacing:.08em; text-transform:uppercase; color:var(--ink-2); padding-top:3px}
+.brief dd{margin:0; min-width:0; overflow-wrap:anywhere}
+.brief dd.hook{font-family:var(--display); font-size:19px; line-height:1.3}
+.brief dd a{color:var(--red)}
+@media (max-width:860px){ .briefs{grid-template-columns:1fr} .brief,.brief:nth-child(even){padding:24px 0; border-left:0} }
+</style>
+</head>
+<body>
+
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="#top">Habiba <span>Abouzied</span></a>
+    <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="nav">Menu</button>
+    <nav class="nav" id="nav" aria-label="Main">
+      <a href="#about">About</a>
+      <a href="#work">Reels</a>
+      <a href="#film">Film</a>
+      <a href="#photography">Photos</a>
+      <a href="#samples">Planning</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<!-- ================= HOME VIEW ================= -->
+<div id="view-home" data-view>
+
+  <section class="hero" id="top">
+    <div class="wrap">
+      <div class="hero-grid">
+        <div>
+          <p class="eyebrow mono">Marketing communications &nbsp;·&nbsp; Cairo</p>
+          <h1>Campaigns, content <em>&amp; film</em>, from the brief to the final cut.</h1>
+          <p class="lede">Strategy, copy, camera and edit.</p>
+        </div>
+      </div>
+      <div class="montage">
+        <figure class="mo-a">
+          <img src="img/enemy-reach.jpg" alt="A boy in a red sweater reaches toward an overcast sky, from the short film Enemy of the Sun" width="1600" height="902">
+          <figcaption><b>Enemy of the Sun</b><span>Short film</span></figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="band rule-top" id="about">
+    <div class="wrap about-grid">
+      <figure class="portrait">
+        <img src="img/habiba.jpg" alt="Portrait of Habiba Abouzied in a white blazer" width="800" height="800" loading="lazy">
+        <figcaption class="mono">Habiba Abouzied</figcaption>
+      </figure>
+      <div class="about-body">
+        <p class="mono" style="color:var(--red); margin-bottom:18px">About</p>
+        <p class="pull">A marketer trained as a filmmaker. I take an idea from <em>strategy</em> to the final cut.</p>
+
+        <div class="facts">
+          <div>
+            <h3>Fields</h3>
+            <ul><li>Social content</li><li>Film &amp; video</li><li>Video editing</li><li>Photography</li><li>Ad design</li><li>Marketing strategy</li></ul>
+          </div>
+          <div>
+            <h3>Education</h3>
+            <ul><li>B.A. Communication, AUC<small>High Honors · Minors in Film &amp; Philosophy</small></li></ul>
+          </div>
+          <div>
+            <h3>Languages</h3>
+            <ul><li>English · Arabic · French</li></ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band rule-top" id="work">
+    <div class="wrap">
+      <div class="sec-head">
+        <div><p class="kicker mono">Social content</p><h2>The <em>reels</em></h2></div>
+      </div>
+      <div class="filters" id="reelFilters" role="group" aria-label="Filter reels by client"></div>
+      <div class="sheet" id="sheet"></div>
+    </div>
+  </section>
+
+  <section class="band screening" id="film">
+    <div class="wrap">
+      <div class="sec-head">
+        <div><p class="kicker mono">Film &amp; video</p><h2>Screening <em>room</em></h2></div>
+      </div>
+
+      <div class="feature">
+        <div class="stills">
+          <figure><img src="img/enemy-reach.jpg" alt="The boy reaches toward an overcast sky" width="1600" height="902" loading="lazy"></figure>
+          <figure><img src="img/enemy-orchard-hd.jpg" alt="A boy in a red sweater reaches for pomegranates on a dry bush" width="1600" height="903" loading="lazy"></figure>
+          <figure><img src="img/enemy-portrait.jpg" alt="Close-up of the boy's face, squinting in daylight" width="511" height="286" loading="lazy"></figure>
+        </div>
+        <div class="feature-text">
+          <p class="tag mono">Short film</p>
+          <h3>Enemy of the Sun</h3>
+          <p class="mono">Co-director · Cinematographer · Editor</p>
+          <a class="btn" href="https://drive.google.com/file/d/1ildvgOaEVz_rW05s7WE1Jbzwhj_gLhrF/view" target="_blank" rel="noopener">Watch the intro <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+
+      <div class="reels-head"><h3>Music video <em style="font-weight:400">(unofficial)</em></h3><p>Videography · Editing · Color</p></div>
+      <div class="mv">
+        <figure><img src="img/mv-1.jpg" alt="A man walks away down a weathered green steel footbridge" width="810" height="548" loading="lazy"></figure>
+        <figure><img src="img/mv-2.jpg" alt="Thin candles burning against a dark background" width="543" height="373" loading="lazy"></figure>
+        <figure><img src="img/mv-4.jpg" alt="A silhouetted figure beside a stained-glass window" width="524" height="358" loading="lazy"></figure>
+        <figure><img src="img/mv-3.jpg" alt="Painted church dome seen from below, with a chandelier" width="523" height="357" loading="lazy"></figure>
+      </div>
+
+      <div class="reels-head"><h3>Vezeeta</h3><p>Camera operator &amp; editor</p></div>
+      <div class="vids single" id="vidsVezeeta"></div>
+
+      <div class="reels-head"><h3>The American University in Cairo</h3><p>Media assistant · Videographer · Producer</p></div>
+      <div class="vids" id="vidsAuc"></div>
+    </div>
+  </section>
+
+  <section class="band" id="photography">
+    <div class="wrap">
+      <div class="sec-head">
+        <div><p class="kicker mono">Photography</p><h2>Still <em>frames</em></h2></div>
+      </div>
+      <div class="gallery">
+        <div class="g-row">
+          <figure style="--ar:1.418"><img src="img/photo-1.jpg" alt="A long arcade of pointed arches and columns with hanging lanterns receding into shadow" width="1100" height="776"></figure>
+          <figure style="--ar:1.451"><img src="img/photo-2.jpg" alt="A columned corridor of globe lanterns framed through a carved stone opening" width="1100" height="758"></figure>
+        </div>
+        <div class="g-row">
+          <figure style="--ar:1.5"><img src="img/photo-3.jpg" alt="Ornate painted ceiling with stained-glass skylights and marble columns, seen from below" width="777" height="518"></figure>
+          <figure style="--ar:1.499"><img src="img/photo-4.jpg" alt="Close-up of a carved stone and turquoise inscription panel, with a domed arcade blurred behind" width="1100" height="734"></figure>
+        </div>
+        <div class="g-row">
+          <figure style="--ar:1.501"><img src="img/photo-5.jpg" alt="Looking up at alabaster arches, carved window grilles and hanging lamps" width="1100" height="733"></figure>
+          <figure style="--ar:1.5"><img src="img/photo-6.jpg" alt="Alabaster gallery of arched windows with globe lanterns and a carved metal screen" width="1089" height="726"></figure>
+          <figure style="--ar:0.666"><img src="img/photo-7.jpg" alt="Sunlit marble columns casting long shadows across a courtyard" width="533" height="800"></figure>
+        </div>
+      </div>
+
+      <div class="ads-head">
+        <h3>Ad design</h3>
+        <p class="mono">Product photography · Concept · Copy</p>
+      </div>
+      <div class="ads">
+        <figure><img src="img/ad-1.jpg" alt="Concept ad: a dewy green soda can floating among blurred green apples under the word CRISP" width="1100" height="1375" loading="lazy"><figcaption><b>“Crisp.”</b><span>Studio concept</span></figcaption></figure>
+        <figure><img src="img/ad-2.jpg" alt="Concept ad: a cold soda can on a sunny beach with green apples, headline Cold hits different" width="1100" height="1375" loading="lazy"><figcaption><b>“Cold hits different.”</b><span>Beach concept</span></figcaption></figure>
+        <figure><img src="img/ad-3.jpg" alt="Concept ad: a soda can beside green apples and a mint cooler, headline Summer, on ice" width="1100" height="1375" loading="lazy"><figcaption><b>“Summer, on ice.”</b><span>Lifestyle concept</span></figcaption></figure>
+      </div>
+      <p class="ads-note mono">Spec work for Sprite. Not commissioned by the brand.</p>
+    </div>
+  </section>
+
+  <section class="band rule-top" id="samples">
+    <div class="wrap">
+      <div class="sec-head">
+        <div><p class="kicker mono">Planning &amp; strategy</p><h2>On <em>paper</em></h2></div>
+      </div>
+      <div class="projects">
+        <article class="project">
+          <p class="mono field-lbl">Social content</p>
+          <div class="project-main">
+            <h3>Padel Finder</h3>
+            <p>Humor, stories, lessons and community for a padel app.</p>
+          </div>
+          <div class="project-links">
+            <a href="#padel-finder">Content calendar <span class="arr" aria-hidden="true">→</span></a>
+            <a href="#briefs">Creative brief <span class="arr" aria-hidden="true">→</span></a>
+            <a href="#activation">On-ground activation <span class="arr" aria-hidden="true">→</span></a>
+          </div>
+        </article>
+        <article class="project">
+          <p class="mono field-lbl">Mini-campaign<span class="place">Dubai, UAE</span></p>
+          <div class="project-main">
+            <h3>Makan Home</h3>
+            <p>A reel that hooks, a paid ad that sells. Living room bundles for a Dubai furniture brand.</p>
+          </div>
+          <div class="project-links">
+            <a href="#makan-home">See the campaign <span class="arr" aria-hidden="true">→</span></a>
+          </div>
+        </article>
+        <article class="project">
+          <p class="mono field-lbl">Marketing strategy</p>
+          <div class="project-main">
+            <h3>Noma</h3>
+            <p>A full brand marketing strategy.</p>
+          </div>
+          <div class="project-links">
+            <a href="https://drive.google.com/file/d/1XbYYM0PEiH8ejMKrJYgg3nREgMGRqDm-/view?usp=sharing" target="_blank" rel="noopener">Read the strategy <span class="arr" aria-hidden="true">↗</span></a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="band rule-top" id="experience">
+    <div class="wrap">
+      <div class="sec-head">
+        <div><p class="kicker mono">Experience</p><h2>Six years, <em>three worlds</em></h2></div>
+        <p>Corporate marketing, agency sales and media production. Open any role for the detail.</p>
+      </div>
+      <div class="exp-grid">
+        <ol class="timeline" id="timeline"></ol>
+        <aside class="side">
+          <h3>Awards &amp; recognition</h3>
+          <ol>
+            <li>Award of Excellence<small>Broadcast Education Association PSA Competition · 2021</small></li>
+            <li>Best Digital Campaign<small>Communication &amp; Media Arts Dept., AUC · 2021</small></li>
+            <li>Short film selected for exhibition<small>Encounters International Short Film Festival · 2021</small></li>
+          </ol>
+          <h3>Brands I've sold campaigns for</h3>
+          <ol>
+            <li>L'Oréal Paris · Magrabi Optics · Pandora Jewelry · ElSewedy Education · Go Bus · Cityscape Egypt<small>At One Media Advertising · 2023</small></li>
+          </ol>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <section class="band" id="contact">
+    <div class="wrap contact">
+      <p class="mono" style="color:var(--red); margin:28px 0 24px">Contact</p>
+      <h2>Let's make something <em>worth watching.</em></h2>
+      <div class="contact-grid">
+        <div>
+          <p class="mono">Email</p>
+          <a class="big-link" id="email" href="mailto:habibaabouzied@aucegypt.edu">habibaabouzied@aucegypt.edu</a><br>
+          <button class="copy" id="copyEmail" type="button">Copy email</button>
+        </div>
+        <div>
+          <p class="mono">LinkedIn</p>
+          <a class="big-link" href="https://www.linkedin.com/in/habibaabouzied123/" target="_blank" rel="noopener">in/habibaabouzied123 ↗</a>
+        </div>
+        <div>
+          <p class="mono">Based in</p>
+          <p class="big-link" style="border:0; user-select:auto">Cairo, Egypt. Working worldwide.</p>
+        </div>
+      </div>
+      <div class="foot mono"><span>© 2026 Habiba Abouzied</span><a href="#top">Back to top ↑</a></div>
+    </div>
+  </section>
+</div>
+
+<!-- ================= PADEL FINDER VIEW ================= -->
+<div id="view-makan" data-view hidden>
+  <section class="band case-hero">
+    <div class="wrap">
+      <a class="crumb mono" href="#samples">← Back to portfolio</a>
+      <p class="mono" style="color:var(--red); margin-bottom:20px">Mini-campaign · Makan Home · Dubai, UAE</p>
+      <h1>“If only Ross knew about MAKAN’s <em>living room bundles.</em>”</h1>
+      <p class="mk-lede">The “PIVOT!” scene from <i>Friends</i> turns the pain of moving furniture into the setup for MAKAN’s rent-to-own bundles.</p>
+
+      <div class="mk-flow">
+        <article class="mk-step">
+          <p class="mono"><b>01</b> Instagram reel · Awareness</p>
+          <h3>The hook</h3>
+          <ol class="mk-beats">
+            <li>Ross on the stairs: the struggle everyone recognizes.</li>
+            <li>Quick cuts of a MAKAN bundle assembling with ease.</li>
+            <li>The payoff: relaxing in the finished room.</li>
+          </ol>
+          <a class="mk-link" href="https://drive.google.com/file/d/1kQEdm6iG6jejVQ4B9HZlQK7qomsPJqzK/view?usp=sharing" target="_blank" rel="noopener">Watch the reel ↗</a>
+        </article>
+        <article class="mk-step">
+          <p class="mono"><b>02</b> Paid ad · Conversion</p>
+          <h3>The close</h3>
+          <figure class="mk-ad"><img src="img/makan-ad.jpg" alt="Instagram paid ad mockup: a MAKAN living room bundle with the line Solve your living room dilemma" width="648" height="648" loading="lazy"></figure>
+          <p class="mk-quote">“Solve your living room dilemma.”</p>
+          <p class="mk-tags mono">Rent-to-own · Quality · Affordable · Fast delivery · Shop Now</p>
+          <a class="mk-link" href="https://drive.google.com/file/d/1rXr4tyarOB90F3e92wzbSjrkvN0qXojn/view?usp=drive_link" target="_blank" rel="noopener">View the ad ↗</a>
+        </article>
+      </div>
+
+      <p class="mk-synergy">The reel sparks the conversation. <em>The paid ad closes the deal.</em></p>
+      <p class="mk-extra mono">Plus: a second humorous reel, with on-screen text on the rent-to-own model.</p>
+    </div>
+  </section>
+</div>
+
+<div id="view-padel" data-view hidden>
+  <section class="band case-hero" style="padding-bottom:0">
+    <div class="wrap">
+      <a class="crumb mono" href="#samples">← Back to portfolio</a>
+      <p class="mono" style="color:var(--red); margin-bottom:20px">Social content · Padel Finder</p>
+      <h1>Finding a court is easy. <em>Finding the 4th player</em> is the real sport.</h1>
+      <div class="hooks" id="hooks"></div>
+      <div class="tabs" role="tablist" aria-label="Padel Finder documents">
+        <button class="tab" role="tab" id="tab-cal" aria-controls="panel-cal" aria-selected="true">Content calendar</button>
+        <button class="tab" role="tab" id="tab-briefs" aria-controls="panel-briefs" aria-selected="false">Shoot list</button>
+        <button class="tab" role="tab" id="tab-act" aria-controls="panel-act" aria-selected="false">On-ground activation</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="band" style="padding-top:0" >
+    <div class="wrap">
+      <div id="panel-cal" role="tabpanel" aria-labelledby="tab-cal">
+        <div class="strip" id="strip" aria-label="Posting days in October 2025"></div>
+        <div class="strip-legend mono"><span>1 Oct</span><span>31 Oct</span></div>
+        <div class="cal-filters">
+          <div class="group" id="goalFilters" role="group" aria-label="Filter by angle"></div>
+        </div>
+        <ol class="posts" id="posts"></ol>
+      </div>
+      <div id="panel-briefs" role="tabpanel" aria-labelledby="tab-briefs" hidden>
+        <div class="sec-head" style="margin-top:44px">
+          <div><p class="kicker mono">Shoot list</p><h2>Reels, <em>on court</em></h2></div>
+        </div>
+        <div class="briefs" id="briefList"></div>
+      </div>
+      <div id="panel-act" role="tabpanel" aria-labelledby="tab-act" hidden>
+        <div class="sec-head" style="margin-top:44px">
+          <div><p class="kicker mono">Padel Finder × The TriFactory</p><h2>On the <em>ground</em></h2></div>
+        </div>
+        <div class="act-top">
+          <dl class="act-event">
+            <div><dt class="mono">Event</dt><dd>Marakez Pyramids Half Marathon by The TriFactory</dd></div>
+            <div><dt class="mono">Race day</dt><dd>Saturday, 13 Dec 2025</dd></div>
+            <div><dt class="mono">Race expo</dt><dd>Mall of Arabia, El Sheikh Zayed<small>Thu 11 Dec, 14:00–20:00 · Fri 12 Dec, 12:00–20:00</small></dd></div>
+          </dl>
+          <div class="act-lists">
+            <div>
+              <h3 class="mono">Objectives</h3>
+              <ol>
+                <li>Drive app downloads and registrations (main KPI)</li>
+                <li>Increase brand visibility</li>
+                <li>Create shareable, memorable moments for participants</li>
+              </ol>
+            </div>
+            <div>
+              <h3 class="mono">Zone setup</h3>
+              <ul>
+                <li><b>Branded booth.</b> PF backdrop, flags and QR codes to download the app.</li>
+                <li><b>Volunteers</b> in PF t-shirts to guide visitors, hand out prizes and run games.</li>
+                <li><b>Download first.</b> To join any game, visitors download and register on the spot.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="ideas">
+          <article><span class="mono">01</span><h4>Spin the wheel</h4><p>Free padel bookings, water bottles, stickers and discount codes.</p></article>
+          <article><span class="mono">02</span><h4>Photobooth</h4><p>Branded paddles, rackets and quote props like “Game. Set. Match.” Instant printed copy.</p></article>
+          <article><span class="mono">03</span><h4>Snap. Share. Score.</h4><p>Post a booth photo tagging @PadelFinder. Most engagement wins 5,000 EGP or a Samsung wristband.</p></article>
+          <article><span class="mono">04</span><h4>Serve &amp; Win</h4><p>Serve a ball through a wooden board with different-sized holes. Each hole is a different prize.</p></article>
+          <article><span class="mono">05</span><h4>Challenge a Friend</h4><p>A mini padbol half court. Pair up and rally, no skill needed, then take home “Your First Padbol Rally.”</p></article>
+          <article><span class="mono">06</span><h4>2-Minute Juggle</h4><p>Keep a football in the air for two minutes without it touching the ground.</p></article>
+          <article><span class="mono">07</span><h4>Confessional Booth</h4><p>Record a 15-second sports confession. The funniest get featured on PF socials after the event.</p></article>
+          <article><span class="mono">08</span><h4>Your First Match in VR</h4><p>VR goggles, a virtual court and a 60–90 second rally against an AI opponent or a friend.</p></article>
+        </div>
+        <div class="act-risks">
+          <h3 class="mono">Constraints</h3>
+          <p><b>Space &amp; power.</b> Socket count, load and cable management pre-cleared with expo ops.</p>
+          <p><b>Queues.</b> Friday is peak pre-race traffic, so every game takes 60 seconds or less and stays low-sweat.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+</main>
+
+<script>
+/* Set to true when you host this site yourself (GitHub Pages, Netlify…).
+   It swaps the link-out frames for live Instagram and YouTube players.
+   Keep it false inside a Claude artifact, which can't embed other sites. */
+const LIVE_EMBEDS = true;
+
+const REELS = [
+  {id:"DQe-WANCHo4", client:"Padel Finder", handle:"@padelfinder", kind:"Sports app"},
+  {id:"DPg7wshiFRj", client:"Padel Finder", handle:"@padelfinder", kind:"Sports app"},
+  {id:"C-rfnzGs1xJ", client:"Spunsprinkles", handle:"@spunsprinkles", kind:"Brand"},
+  {id:"C-8NzTkMxU_", client:"Spunsprinkles", handle:"@spunsprinkles", kind:"Brand"},
+  {id:"DALYnl9so0t", client:"Asrar Mohammad", handle:"@al_asrar", kind:"Personal brand"},
+  {id:"DE0ANHLs2Rs", client:"Asrar Mohammad", handle:"@al_asrar", kind:"Personal brand"},
+  {id:"DSVDpeFiKsL", client:"Dusit Thani LakeView Cairo", handle:"@dusitthanicairo", kind:"Hospitality"},
+  {id:"CiaTYTeLG5Q", client:"CUE Media House", handle:"@cuemediahouse", kind:"Production", path:"tv"},
+  {id:"Ch2cxFuDJiz", client:"CUE Media House", handle:"@cuemediahouse", kind:"Production"},
+  {client:"La Zucca", handle:"@lazuccaegypt", kind:"Brand", fb:"https://www.facebook.com/lazuccaegypt/videos/1175509786422493/"},
+  {id:"DJHbE16MOcV", client:"Nora Naser", handle:"@dailystuff.kw", kind:"Creator · Kuwait"}
+];
+const VIDEOS = {
+  vezeeta:[{id:"BRf7pL6o6Lc", label:"Vezeeta", role:"Camera & edit"}],
+  auc:[
+    {id:"yspKnPKVpoI", label:"AUC · Video 1", role:"Videographer"},
+    {id:"wLjpKltlbgY", label:"AUC · Video 2", role:"Videographer"},
+    {id:"C68QS8HJa5M", label:"AUC · Video 3", role:"Producer"},
+    {id:"RQ_-AKLhtoI", label:"AUC · Video 4", role:"Media assistant"}
+  ]
+};
+const JOBS = [
+  {from:"Feb 2024", to:"Present", title:"Freelance AI Content Creator & Video Producer", org:"Worldwide", pts:[
+    "Use AI tools across the whole content workflow, from ideation and scripting to editing and visuals, to deliver high-quality content faster and at lower cost.",
+    "Produce and edit videos and creative assets that increased video views and audience engagement.",
+    "Run A/B tests on AI-assisted creative and copy, improving click-through rates.",
+    "Build SEO-optimized content ideas and topics tailored to each audience and platform.",
+    "Write copy for varied audiences, using AI for drafts and research and human judgment for brand voice and quality."]},
+  {from:"Feb 2024", to:"Present", title:"Freelance Social Media & Digital Marketing Specialist", org:"Worldwide", pts:[
+    "Develop and run multichannel campaigns across email, social and paid channels, using AI to scale ideation, ad variations and content calendars.",
+    "Plan paid social strategy and create ad copy and visuals with specialist media buyers who run and optimize the campaigns.",
+    "Improve organic search rankings through content optimization, increasing organic traffic.",
+    "Use social and digital marketing to expand a client's talent pool and recruitment reach."]},
+  {from:"Aug 2023", to:"Jan 2024", title:"Senior Marketing Communications Specialist", org:"BICC Cables, Cairo", pts:[
+    "Built content strategies for digital media and managed ATL and BTL campaigns from planning to delivery.",
+    "Conducted market research and competitor analysis to guide positioning and messaging.",
+    "Optimized website content and images for search, improving search rankings.",
+    "Wrote the web content for the company's main website and created marketing materials that increased product awareness."]},
+  {from:"May 2023", to:"Aug 2023", title:"Account Manager", org:"One Media Advertising, Cairo", pts:[
+    "Built relationships with advertisers, negotiated pricing and presented media and advertising packages.",
+    "Researched and pitched new territories to win clients.",
+    "Created sales campaigns that drove leads and sales for L'Oréal Paris, Magrabi Optics, Pandora Jewelry, ElSewedy Education, Go Bus and Cityscape Egypt."]},
+  {from:"Aug 2022", to:"Dec 2022", title:"Video Editing Teaching Assistant, Master's Program", org:"The American University in Cairo", pts:[
+    "Taught video editing through video lectures and interactive quizzes.",
+    "Gave one-on-one support to students with special needs, improving their academic performance."]},
+  {from:"Jun 2021", to:"Aug 2022", title:"Producer / Director / Editor", org:"CUE Media House, Cairo", pts:[
+    "Produced social content for Instagram, Facebook, TikTok and YouTube, plus promotional ads and marketing materials.",
+    "Directed team members on cinematography and delivered multi-camera edits with titles, graphics, audio and effects.",
+    "Developed stories around current trends and news to drive audience traffic to the website."]},
+  {from:"Feb 2021", to:"May 2021", title:"Media / Video Assistant", org:"The American University in Cairo", pts:[
+    "Operated cameras and video equipment, set lighting and framing, and supported live-stream production."]}
+];
+
+const GOALS = {humor:"Humor", feat:"Storytelling", edu:"Lessons", comm:"Community", eng:"Interactive", aes:"Visual"};
+const POSTS = [
+  {d:2, f:"Carousel", idea:"Most common padel injury? Guess what 👀", goal:"Increase story interactions", g:"eng",
+   hook:"Most common padel injury? Guess what 👀", caption:"Think you know what it is? Comment your guess before you swipe.",
+   copy:"It's not your shoulder. It's not your knee. It's actually… the elbow. Padel elbow (like tennis elbow).\n\nCaused by repetitive strain from swings and vibrations. Pain is felt on the outside of the elbow.\n\nHow to prevent it:\n· Warm up wrists and forearms before playing\n· Choose the right racket for your level\n· Focus on smooth technique, not brute force\n· Rest and recover between matches\n\nDon't ignore pain. Small tweaks can save you weeks of recovery.",
+   note:"Fun infographic style.", refs:[], inf:"No", prod:"No"},
+  {d:4, f:"Reel", idea:"When you need a fourth player", goal:"Humanize the brand with humor", g:"humor",
+   hook:"When you need a fourth player", caption:"Finding a court is easy. Finding the 4th player? That's the real sport.",
+   copy:"When you need a fourth player", refs:["https://www.instagram.com/p/DMDWLgwi3CQ/","https://vt.tiktok.com/ZSDQkuXLT/"], inf:"No", prod:"No"},
+  {d:6, f:"Reel", idea:"How would you return this serve?", goal:"Boost comments & engagement", g:"eng",
+   hook:"How would you return this serve?", caption:"How would YOU return this serve?", copy:"How would you return this serve / move?",
+   refs:["https://www.instagram.com/p/DMDWLgwi3CQ/"], inf:"Yes", prod:"Yes", brief:1},
+  {d:8, f:"Static", idea:"Introducing Padel & Beyond", goal:"Highlight features", g:"feat",
+   hook:"Padel is just the beginning… welcome to Padel & Beyond.", caption:"TBA", copy:"TBA", refs:[], inf:"No", prod:"No"},
+  {d:10, f:"Carousel", idea:"Meet Omar", goal:"Highlight features", g:"feat",
+   hook:"Meet Omar", caption:"Courts are filling up. Players are matching. Rallies are happening. 👀 And you? Still waiting for a friend to reply.",
+   copy:"Slide 1 · Meet Omar. Omar loves padel… but has no one to play with.\nSlide 2 · So what does Omar do? Scrolls. Calls friends. Waits. Still… no match.\nSlide 3 · Then Omar discovers Padel Finder. Swipe, magic incoming.\nSlide 4 · Omar opens the app. Finds players. Books a match.\nSlide 5 · Now Omar's smashing rallies, making new friends, and never missing a game again.",
+   refs:[], inf:"No", prod:"No"},
+  {d:12, f:"Stories", idea:"Courts available now / Play tonight", goal:"Increase story interactions", g:"eng",
+   hook:"N/A", caption:"N/A", copy:"Courts available now / Play tonight", refs:[], inf:"No", prod:"TBC"},
+  {d:14, f:"Reel", fx:"Reel + stories", idea:"Challenge of the week", goal:"Boost engagement", g:"eng",
+   hook:"Can you do this serve?", caption:"Challenge of the Week", copy:"Can you do this serve?", refs:[], inf:"Yes", prod:"Yes", brief:9},
+  {d:16, f:"Reel", fx:"Reel + post", idea:"When you played your worst game by far, but they still invite you to play again next week", goal:"Humanize the brand with humor (shareable)", g:"humor",
+   hook:"When you played your worst game by far, but they still invite you to play again next week", caption:"So… same time next week?",
+   copy:"When you played your worst game by far, but they still invite you to play again next week", refs:["https://www.instagram.com/p/DNOH00zx_wF/","https://vt.tiktok.com/ZSDxgnUDs/"], inf:"No", prod:"No"},
+  {d:18, f:"Reel", idea:"Stop doing this: quick fixes", goal:"Educational", g:"edu",
+   hook:"Stop doing this.", caption:"Stop doing this / Do this", copy:"Stop doing this. Do this.", refs:["https://www.instagram.com/p/DOQ_aVmCMLN/"], inf:"Yes", prod:"Yes", brief:8},
+  {d:20, f:"Static", idea:"Series intro (animation): Club / Player of the Week", goal:"Create FOMO / community storytelling", g:"comm",
+   hook:"Introducing something new", caption:"The spotlight is ON",
+   copy:"Introducing something new 👀\nEvery week we'll be shining the spotlight on the players and clubs that make Egypt's padel community what it is 🎾✨\n\nFrom rising stars to fan-favorite clubs, this is your chance to see who's making waves in the game.\n\nStay tuned for our very first feature dropping soon… it might just be YOU.",
+   refs:[], inf:"No", prod:"No"},
+  {d:22, f:"Reel", idea:"Beginner vs Intermediate vs Pro", goal:"Educational authority positioning", g:"edu",
+   hook:"Same shot… 3 completely different outcomes", caption:"Beginner vs Intermediate vs Pro", copy:"Same shot… 3 completely different outcomes",
+   refs:["https://www.instagram.com/p/DLXQBQouRfC/"], inf:"Yes", prod:"Yes", brief:4},
+  {d:24, f:"Carousel", idea:"Padel Finder Bingo", goal:"Boost engagement", g:"eng",
+   hook:"Padel Bingo.", caption:"Padel Bingo ✅ Swipe. Count. Confess.",
+   copy:"Each slide is a bingo row. Examples:\n· Played in the rain.\n· Smashed into the glass.\n· Blamed my partner.\n\nFinal slide: How many did you tick off? Comment your score.", refs:[], inf:"No", prod:"No"},
+  {d:26, f:"Static", idea:"Padel, but make it art.", goal:"Feed aesthetics", g:"aes",
+   hook:"Padel, but make it art. 🎨🎾", caption:"Not just a game. Not just a court.", copy:"Padel, but make it art.",
+   note:"Overhead drone shot of a court, or a creative crop of rackets and balls in shadow.", refs:[], inf:"No", prod:"Yes"},
+  {d:28, f:"Static", idea:"Series: Club / Player of the Week", goal:"Create FOMO / community storytelling", g:"comm",
+   hook:"This week's Player of the Week 🎾🔥", caption:"This week's Player of the Week. Never misses a smash / played 5 matches in one weekend / always cheering on the court. Tag who you think should be next!",
+   copy:"Player / Club of the Week", refs:[], inf:"No", prod:"No"}
+];
+
+const BRIEFS = [
+  {t:"How would you return this serve?", concept:"Ahmed Alaa hits a serve on court with the text \"How would you return this serve?\", or explains how to return it. Viewers film their own return or answer in the comments.",
+   hook:"Be honest… could you return this?", cta:"Comment your answer, or record your version and tag Padel Finder. The best could win a match with Ahmed Alaa.", caption:"How would YOU return this serve?",
+   visual:"Clip of Ahmed serving → dramatic slow motion → bold text overlay → ends with him pointing to camera with a cheeky grin.", ref:"https://www.instagram.com/p/DND9sV8sehG/"},
+  {t:"How to pick the right racket", concept:"An informative reel showing different kinds of rackets and when and how to use each.",
+   hook:"Choosing the wrong racket is holding you back.", cta:"Which racket is right for YOU?", caption:"Save this guide before your next gear upgrade.",
+   visual:"Ahmed on court with 3–4 rackets on display → close-ups of grip, head shape and weight → Ahmed explains the pros and cons of each.", ref:"https://www.instagram.com/p/DOnDR_ciHiO/"},
+  {t:"Padel stereotypes", concept:"Ahmed acts out the best-known padel player personas, then asks which one you are.", list:["The wallbanger","The tennis player","The slicer","Mr. No Glass"],
+   hook:"You've played with ALL of these people.", cta:"Tag the friend who plays like this.", caption:"Which one are you?",
+   visual:"Quick-cut transitions of Ahmed dressed and acting as each stereotype → on-screen labels → energetic music.", ref:"https://www.instagram.com/p/DNx-seyWIXE/"},
+  {t:"Beginner, intermediate, pro", concept:"A three-way split screen. Each panel shows Ahmed returning the same serve or smash at a different level.",
+   hook:"Same shot… 3 completely different outcomes.", cta:"Which one are you? Comment below.", caption:"Beginner · Intermediate · Pro",
+   visual:"Screen split into three columns, the same serve played, three reactions.", ref:"https://www.instagram.com/p/DLXQBQouRfC/"},
+  {t:"3 biggest cheat codes in padel", concept:"Ahmed demonstrates three cheat codes in three shots, with text for each. Three sets to choose from:",
+   list:["Serve to the middle → volley to the glass → get close to tap out","Serve to the body → get to the net fast → play the drop shot","Serve to the backhand → sprint to the net → go for the point"],
+   hook:"These 3 tricks win points almost every time.", cta:"Save this and use it in your next match.", caption:"3 padel cheat codes pros use",
+   visual:"Three short clips of Ahmed demonstrating each → text pops up with each hack → ends with him nodding: \"Try it.\"", ref:"https://www.instagram.com/p/DNaMe3CI3B1/"},
+  {t:"What separates good players from great ones?", concept:"Five rules every top player lives by, and that you can start using today:",
+   list:["<b>Play high-percentage shots.</b> Pros build points patiently and attack only when the timing is right.","<b>Recover your position.</b> Every shot is followed by a quick reset.","<b>Use the walls.</b> Pros read the rebounds and turn defense into attack.","<b>Always communicate.</b> \"Mine, yours, switch\" keeps a pair in sync.","<b>Play the opponent, not the ball.</b> Hit where your opponents aren't."],
+   hook:"Here are 5 that every top player lives by.", cta:"Try one in your next match and tell us what happened.", caption:"5 rules pros never break",
+   visual:"Cinematic close-ups in slightly darker tones → Ahmed narrating between action clips → rule text in a clean white font."},
+  {t:"The 80/20 rule of padel", concept:"Ahmed talks straight to camera about how pros apply it every match:", list:["80% patience → 20% attack","80% safe shots → 20% calculated risks","80% watching and waiting → 20% striking at the perfect time"],
+   hook:"If you only remember one rule… make it this.", cta:"Save this and try it during your next game.", caption:"The 80/20 rule of padel",
+   visual:"Direct to camera, short and punchy → animated 80/20 graphics pop on screen as he talks.", ref:"https://www.instagram.com/p/DN2tSoy0Hox/"},
+  {t:"Stop doing this…", concept:"Ahmed plays on court under the text \"Stop doing this\", acts out the big mistakes, then shows the right way.", list:["If the ball is low, play a forehand.","If the ball is high, play a bandeja."],
+   hook:"Stop doing this.", cta:"Follow for more quick fixes like this.", caption:"Stop doing this ✕ / Do this ✓",
+   visual:"Short clip of the wrong move → short clip of the right one, each with a text overlay.", ref:"https://www.instagram.com/p/DOQ_aVmCMLN/"},
+  {t:"Challenge of the week", concept:"Ahmed demonstrates a difficult serve and challenges viewers to recreate it, tagging Padel Finder and three friends to win a prize.",
+   hook:"Can you do this serve?", cta:"Tag Padel Finder and 3 friends for a chance to win.", caption:"Challenge of the Week",
+   visual:"Ahmed performs the serve dramatically → slow-motion replay → challenge text overlay with the prize image popping up."}
+];
+
+const $ = (s, r=document) => r.querySelector(s);
+const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const PLAY = '<span class="play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6 4l14 8-14 8z"/></svg></span>';
+const pad = n => String(n).padStart(2, "0");
+
+/* ---------- reels ---------- */
+function renderReels(filter){
+  const list = REELS.filter(r => !filter || r.client === filter);
+  $("#sheet").innerHTML = list.map(r => {
+    const n = REELS.indexOf(r) + 1;
+    const site = r.fb ? "Facebook" : "Instagram";
+    const url = r.fb || `https://www.instagram.com/${r.path || "reel"}/${r.id}/`;
+    const embed = r.fb ? `https://www.facebook.com/plugins/video.php?href=${encodeURIComponent(r.fb)}&show_text=false` : `${url}embed/`;
+    if (LIVE_EMBEDS) return `<div class="reel"><iframe src="${embed}" title="${esc(r.client)} video on ${site}" loading="lazy" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe></div>`;
+    return `<div class="reel"><a class="reel-card" href="${url}" target="_blank" rel="noopener" aria-label="Watch ${esc(r.client)} video ${n} on ${site}">
+      <span class="reel-top"><b>Fr. ${pad(n)}</b><span>${esc(r.kind)}</span></span>
+      <span class="reel-mid">${PLAY}</span>
+      <span><span class="reel-name">${esc(r.client)}<small>${esc(r.handle)}</small></span>
+      <span class="reel-foot" style="display:block">Watch on ${site} ↗</span></span></a></div>`;
+  }).join("");
+}
+function initReels(){
+  const clients = [...new Set(REELS.map(r => r.client))];
+  const box = $("#reelFilters");
+  box.innerHTML = [`<button class="chip" type="button" data-c="" aria-pressed="true">All<span class="n">${REELS.length}</span></button>`]
+    .concat(clients.map(c => `<button class="chip" type="button" data-c="${esc(c)}" aria-pressed="false">${esc(c)}<span class="n">${REELS.filter(r=>r.client===c).length}</span></button>`)).join("");
+  box.addEventListener("click", e => {
+    const b = e.target.closest(".chip"); if (!b) return;
+    box.querySelectorAll(".chip").forEach(x => x.setAttribute("aria-pressed", x === b));
+    renderReels(b.dataset.c);
+  });
+  renderReels("");
+}
+
+/* ---------- videos ---------- */
+function renderVids(sel, vids){
+  $(sel).innerHTML = vids.map(v => {
+    const watch = `https://www.youtube.com/watch?v=${v.id}`;
+    const frame = LIVE_EMBEDS
+      ? `<button class="vid-frame" type="button" data-yt="${v.id}" style="background-image:url(https://i.ytimg.com/vi/${v.id}/hqdefault.jpg)" aria-label="Play ${esc(v.label)}"><span class="corner">${esc(v.label)}</span>${PLAY}</button>`
+      : `<a class="vid-frame" href="${watch}" target="_blank" rel="noopener" aria-label="Watch ${esc(v.label)} on YouTube"><span class="corner">${esc(v.label)}</span>${PLAY}</a>`;
+    return `<div class="vid">${frame}<div class="vid-cap"><a href="${watch}" target="_blank" rel="noopener">Watch on YouTube ↗</a><span>${esc(v.role)}</span></div></div>`;
+  }).join("");
+}
+document.addEventListener("click", e => {
+  const b = e.target.closest("[data-yt]"); if (!b) return;
+  const f = document.createElement("iframe");
+  f.src = `https://www.youtube-nocookie.com/embed/${b.dataset.yt}?autoplay=1`;
+  f.title = b.getAttribute("aria-label"); f.allow = "autoplay; encrypted-media; picture-in-picture; fullscreen"; f.allowFullscreen = true;
+  b.replaceWith(f);
+});
+
+/* ---------- timeline ---------- */
+function renderJobs(){
+  $("#timeline").innerHTML = JOBS.map((j, i) => `<li class="job"><details${i < 1 ? " open" : ""}>
+    <summary><span class="when"><b>${j.to}</b>${j.from}</span><h3>${esc(j.title)}<span class="org">${esc(j.org)}</span></h3><span class="tog" aria-hidden="true">+</span></summary>
+    <ul>${j.pts.map(p => `<li>${esc(p)}</li>`).join("")}</ul></details></li>`).join("");
+}
+
+/* ---------- calendar ---------- */
+const cal = {f:"", g:""};
+const HOOKS = [
+  [10, "Meet Omar. He loves padel, but has no one to play with."],
+  [16, "So… same time next week?"],
+  [24, "Padel Bingo. Swipe. Count. Confess."],
+  [26, "Padel, but make it art."]
+];
+function renderHooks(){
+  $("#hooks").innerHTML = HOOKS.map(([d, line]) => {
+    const p = POSTS.find(x => x.d === d);
+    return `<a class="hook-card" href="#post-${d}" data-day="${d}"><span class="mono">${esc(GOALS[p.g])} · ${esc(p.f)}</span><q>${esc(line)}</q></a>`;
+  }).join("");
+  $("#hooks").addEventListener("click", e => {
+    const a = e.target.closest("[data-day]"); if (!a) return;
+    e.preventDefault(); showTab("cal"); openDay(a.dataset.day);
+  });
+}
+function match(p){ return (!cal.f || p.f === cal.f) && (!cal.g || p.g === cal.g); }
+function renderStrip(){
+  let h = "";
+  for (let d = 1; d <= 31; d++){
+    const p = POSTS.find(x => x.d === d);
+    h += p ? `<a href="#post-${d}" class="${match(p) ? "" : "is-dim"}" title="${esc(d + " Oct · " + p.idea)}" data-day="${d}">${d}</a>` : `<span aria-hidden="true">${d}</span>`;
+  }
+  $("#strip").innerHTML = h;
+}
+function renderPosts(){
+  const list = POSTS.filter(match);
+  $("#posts").innerHTML = list.length ? list.map(p => `<li class="post" id="post-${p.d}"><details>
+    <summary><span class="day">${pad(p.d)}<small>Oct</small></span><span class="fmt" data-f="${p.f}">${esc(p.fx || p.f)}</span>
+      <span class="idea">${esc(p.idea)}</span><span class="goal">${esc(GOALS[p.g])}</span><span class="tog" aria-hidden="true">+</span></summary>
+    <div class="post-body">
+      <div>
+        <div class="field"><p class="mono">Hook</p><p>${esc(p.hook)}</p></div>
+        <div class="field"><p class="mono">Caption</p><p>${esc(p.caption)}</p></div>
+        <div class="field"><p class="mono">Copy</p><p>${esc(p.copy)}</p></div>
+        ${p.note ? `<div class="field"><p class="mono">Direction</p><p>${esc(p.note)}</p></div>` : ""}
+        ${p.brief ? `<a class="to-brief" href="#briefs" data-brief="${p.brief}">See shoot brief ${pad(p.brief)} →</a>` : ""}
+      </div>
+      <dl class="flags">
+        <div><dt>Goal</dt><dd>${esc(p.goal)}</dd></div>
+        <div><dt>Influencer</dt><dd>${esc(p.inf)}</dd></div>
+        <div><dt>Needs a shoot</dt><dd>${esc(p.prod)}</dd></div>
+        <div><dt>References</dt><dd>${p.refs.length ? p.refs.map((r, i) => `<a href="${r}" target="_blank" rel="noopener">${r.includes("tiktok") ? "TikTok" : "Instagram"} ${i + 1} ↗</a>`).join("<br>") : "None"}</dd></div>
+      </dl>
+    </div></details></li>`).join("") : `<li class="empty">No posts match both filters. Clear one to see more.</li>`;
+}
+function initCalendar(){
+  const fmts = ["Reel","Carousel","Static","Stories"];
+  const mk = (box, key, items) => {
+    box.insertAdjacentHTML("beforeend", [`<button class="chip" type="button" data-v="" aria-pressed="true">All</button>`]
+      .concat(items.map(([v, l]) => `<button class="chip" type="button" data-v="${v}" aria-pressed="false">${l}</button>`)).join(""));
+    box.addEventListener("click", e => {
+      const b = e.target.closest(".chip"); if (!b) return;
+      box.querySelectorAll(".chip").forEach(x => x.setAttribute("aria-pressed", x === b));
+      cal[key] = b.dataset.v; renderStrip(); renderPosts();
+    });
+  };
+  mk($("#goalFilters"), "g", Object.entries(GOALS));
+  $("#strip").addEventListener("click", e => {
+    const a = e.target.closest("a[data-day]"); if (!a) return;
+    e.preventDefault(); openDay(a.dataset.day);
+  });
+  $("#posts").addEventListener("click", e => {
+    const a = e.target.closest("[data-brief]"); if (!a) return;
+    e.preventDefault(); showTab("briefs", +a.dataset.brief);
+  });
+  renderHooks(); renderStrip(); renderPosts();
+}
+function openDay(day){
+  let el = document.getElementById("post-" + day);
+  if (!el){ // filtered out: reset filters so the day is visible
+    cal.f = cal.g = ""; document.querySelectorAll(".cal-filters .chip").forEach(x => x.setAttribute("aria-pressed", x.dataset.v === ""));
+    renderStrip(); renderPosts(); el = document.getElementById("post-" + day);
+  }
+  el.querySelector("details").open = true; el.scrollIntoView({block:"start"});
+}
+function renderBriefs(){
+  const used = Object.fromEntries(POSTS.filter(p => p.brief).map(p => [p.brief, p.d]));
+  $("#briefList").innerHTML = BRIEFS.map((b, i) => `<article class="brief" id="brief-${i + 1}">
+    <p class="brief-n mono"><b>${pad(i + 1)}</b></p>
+    <h3>${esc(b.t)}</h3>
+    <p class="concept">${esc(b.concept)}</p>
+    ${b.list ? `<ul>${b.list.map(x => `<li>${x.includes("<b>") ? x : esc(x)}</li>`).join("")}</ul>` : ""}
+    <dl>
+      <div><dt>Hook</dt><dd class="hook">${esc(b.hook)}</dd></div>
+      <div><dt>CTA</dt><dd>${esc(b.cta)}</dd></div>
+      <div><dt>Caption</dt><dd>${esc(b.caption)}</dd></div>
+      <div><dt>Visual</dt><dd>${esc(b.visual)}</dd></div>
+      ${b.ref ? `<div><dt>Reference</dt><dd><a href="${b.ref}" target="_blank" rel="noopener">View on Instagram ↗</a></dd></div>` : ""}
+    </dl></article>`).join("");
+}
+function showTab(which, briefN){
+  const isB = which === "briefs";
+  [["cal","cal"],["briefs","briefs"],["act","act"]].forEach(([t]) => {
+    $("#tab-" + t).setAttribute("aria-selected", which === t);
+    $("#panel-" + t).hidden = which !== t;
+  });
+  if (briefN){
+    const el = document.getElementById("brief-" + briefN);
+    el.scrollIntoView({block:"start"}); el.classList.remove("flash"); void el.offsetWidth; el.classList.add("flash");
+  }
+}
+$("#tab-cal").addEventListener("click", () => { showTab("cal"); history.replaceState(null, "", "#padel-finder"); });
+$("#tab-briefs").addEventListener("click", () => { showTab("briefs"); history.replaceState(null, "", "#briefs"); });
+$("#tab-act").addEventListener("click", () => { showTab("act"); history.replaceState(null, "", "#activation"); });
+
+/* ---------- routing ---------- */
+const navLinks = [...document.querySelectorAll(".nav a")];
+function route(){
+  const h = location.hash.slice(1);
+  const padel = h === "padel-finder" || h === "briefs" || h === "activation";
+  const makan = h === "makan-home";
+  $("#view-home").hidden = padel || makan; $("#view-padel").hidden = !padel; $("#view-makan").hidden = !makan;
+  if (makan) window.scrollTo(0, 0);
+  else if (padel){ showTab(h === "briefs" ? "briefs" : h === "activation" ? "act" : "cal"); window.scrollTo(0, 0); }
+  else if (h){ const t = document.getElementById(h); if (t) requestAnimationFrame(() => t.scrollIntoView()); }
+  $("#nav").classList.remove("open"); $("#menuBtn").setAttribute("aria-expanded", "false");
+}
+window.addEventListener("hashchange", route);
+
+/* current-section highlight */
+if ("IntersectionObserver" in window){
+  const io = new IntersectionObserver(es => es.forEach(en => {
+    if (en.isIntersecting) navLinks.forEach(a => a.setAttribute("aria-current", a.getAttribute("href") === "#" + en.target.id));
+  }), {rootMargin:"-45% 0px -50% 0px"});
+  ["about","work","film","photography","samples","experience","contact"].forEach(id => io.observe(document.getElementById(id)));
+}
+
+$("#menuBtn").addEventListener("click", () => {
+  const open = $("#nav").classList.toggle("open");
+  $("#menuBtn").setAttribute("aria-expanded", open);
+});
+$("#copyEmail").addEventListener("click", e => {
+  const btn = e.currentTarget, addr = $("#email").textContent;
+  const done = msg => { btn.textContent = msg; setTimeout(() => btn.textContent = "Copy email", 2200); };
+  const fallback = () => { const r = document.createRange(); r.selectNodeContents($("#email")); const s = getSelection(); s.removeAllRanges(); s.addRange(r); done("Selected, press Ctrl+C"); };
+  try { navigator.clipboard.writeText(addr).then(() => done("Copied"), fallback); } catch (_) { fallback(); }
+});
+
+initReels();
+renderVids("#vidsVezeeta", VIDEOS.vezeeta);
+renderVids("#vidsAuc", VIDEOS.auc);
+renderJobs(); initCalendar(); renderBriefs(); route();
+</script>
+
+</body>
+</html>
+/home/user/portfolio/self-hosted/img
